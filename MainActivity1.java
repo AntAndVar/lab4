@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
-public class MainActivity extends AppComp   atActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
