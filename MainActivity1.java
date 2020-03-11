@@ -21,19 +21,23 @@ public class MainActivity extends AppComp   atActivity {
     }
 
    public void onEncrypt(View v) {
-        Cipher encrypt = new Cipher();
-        encrypt.key = ((EditText) findViewById(R.id.key)).getText().toString();
-        String note = encrypt.key;
-        String result = encrypt.encrypt(note);
-        ((EditText) findViewById(R.id.data)).setText(result);
+        EditText D = ((EditText)findViewById(R.id.key));
+        EditText K = ((EditText)findViewById(R.id.key));
+        String newdata = D.getText().toString();
+        String newkey = K.getText().toString();
+        Cipher result = new Cipher(newkey);
+        String update = result.encrypt(newdata);
+        D.setText(update);
     }
 
     public void onDecrypt(View v) {
-        Cipher encrypt = new Cipher();
-        encrypt.key = ((EditText) findViewById(R.id.key)).getText().toString();
-        String note = encrypt.key;
-        String result = encrypt.decrypt(note);
-        ((EditText) findViewById(R.id.data)).setText(result);
+        EditText D = ((EditText)findViewById(R.id.key));
+        EditText K = ((EditText)findViewById(R.id.key));
+        String newdata = D.getText().toString();
+        String newkey = K.getText().toString();
+        Cipher result = new Cipher(newkey);
+        String update = result.decrypt(newdata);
+        D.setText(update);
     }
 
     public void onSave(View v) {
