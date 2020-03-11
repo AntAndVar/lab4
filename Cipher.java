@@ -32,7 +32,7 @@ public class Cipher {
     public String decrypt(String note) {
         String pad = makePad(note);
         String result = "";
-        for (int i = 0; i < note.length(); i++) {
+        for (int i = 0; i < note.length(); i+=1) {
             String c = note.substring(i, i + 1);
             int position = ALPHABET.indexOf(c);
             int shift = Integer.parseInt(pad.substring(i, i + 1));
