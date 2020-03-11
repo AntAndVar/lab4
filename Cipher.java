@@ -11,7 +11,7 @@ public class Cipher {
     private String makePad(String note) {
         String pad = this.key;
         for (; pad.length() < note.length(); ) {
-            pad += this.key;
+            pad = pad + this.key;
         }
         return pad;
     }
