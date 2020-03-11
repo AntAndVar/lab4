@@ -1,4 +1,4 @@
-package com.example.kryptonote;
+package ca.yorku.eecs.kryptonote;
 
 public class Cipher {
     private String key;
